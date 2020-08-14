@@ -1,0 +1,46 @@
+
+/* #A100F5 */
+/* cores nubank */
+/* #8E07C0 roxo*/
+/* #E7718B rosa */
+
+:root {
+
+    /* Fonts */
+    font-size: 62.5%;
+    --font-config: 1.6rem -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --font-smal: 1.5rem;
+    --font-smal2: 1.7rem;
+    --font-normal: 1.9rem;
+    --font-big: 2.2rem;
+
+    /* Colors */
+    --main: #28a6ba;
+    --second: #1A535A;
+
+    --header-title-color: #FFF;
+    --bg-header:rgba(0, 2, 0, 1);
+    --bg-header-open: #FFF;
+    --btn-open: #FFF;
+    --btn-close: #000;
+    --overlay:rgba(0, 0, 0, 0.75);
+    --menu-links: rgba(255, 255, 255, 0.75);
+    --menu-links-hover: var(--main);
+    --menu-btn-color: var(--menu-links);
+    --menu-btn-bg: var(--main);
+    --menu-btn-bg-hover: var(--menu-links);
+    
+    --subtitle: #FFF;
+    --subtitle2: #fff;
+
+    --bg-footer: rgba(0, 0, 0, 0.822);
+    --footerTitles: var(--main);
+    --font-footer: #c1c1c1;
+    --a-footer-hover: #c1c1c1;
+    --a-footer: #fff;
+    --bg-btn-up: #fff;
+    --bg-btn-up-hover: #3c3c3ccc;
+    --bg-btn-up-shadow: #000;
+}
+

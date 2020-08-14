@@ -1,0 +1,142 @@
+#footer {
+    width: 100%;
+    min-width: 320px;
+    position: relative;
+    color: var(--font-footer);
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    background-color: var(--bg-footer);
+
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.6);
+    background-image: url('/icons/bevel_300.png');
+    background-repeat: repeat-x;
+}
+
+#footer button {
+    position: absolute;
+    right: 20px;
+    background: var(--bg-btn-up);
+    box-shadow: var(--bg-btn-up-shadow) 0 3px 6px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    top: -25px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#footer button:hover {
+    background-color: var(--bg-btn-up-hover);
+}
+#footer button img{
+    width: 75%;
+}
+#footer .columns {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer .links {
+    display: none;
+}
+
+#footer ul {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+#footer ul li {
+    list-style: none;
+    padding: .5em 0;
+    font-size: var(--font-smal);
+}
+
+#footer ul li.title {
+    color: var(--footerTitles);
+    font-weight: bold;
+    font-size: var(--font-smal2);
+}
+
+#footer ul li.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#footer ul li.contact p {
+    margin: 0;
+}
+
+#footer .social {
+    align-items: center;
+    justify-content: center;
+}
+
+#footer a {
+    text-decoration: none;
+    color: var(--a-footer);
+    font-weight: bold;
+}
+
+#footer a:hover,
+#footer a:active {
+    color: var(--a-footer-hover);
+}
+
+
+#footer .social a {
+    margin-right: 1em;
+}
+
+#footer .social img {
+    height: 40px;
+}
+#footer .social img:hover,
+#footer .social img:active {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#footer .logo {
+    width: 250px;
+    margin: 2em 0;
+}
+
+#footer p {
+    text-align: center;
+    font-size:  var(--font-smal);
+}
+
+@media (min-width: 1200px) {
+    #footer {
+        padding-bottom: 0;
+    }
+    #footer .columns {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #footer .links {
+        display: flex;
+    }
+    #footer li {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    #footer .links a {
+        color: var(--a-footer);
+        text-decoration: none;
+    }
+    #footer .links a:hover {
+        color: var(--a-footer-hover);
+    }
+    #footer p {
+        font-size: var(--font-smal);
+    }
+}

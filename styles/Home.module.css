@@ -1,123 +1,262 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+#__next {
+  background-color: #c000bc1f;    
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.main, .grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.footer {
+.pageHeader {
+  
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 9px #00000087;
+}
+.shops {
+  background-image: url('/images/photos/topo_contato.jpg');
+}
+
+.cinema {
+  background-image: url('/images/photos/topo_contato.jpg');
+}
+
+.pageHeader .title {
+  display: flex;
+  justify-content: center;
+  background-color: #A100F582;
+  width: 250px;
+  padding-right: 30px;
+  border-radius: 0 0px 100px 0;
+}
+
+.pageHeader .title h1 {
+  color: white;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
+  padding: 40px 0;
+  background-color: #8f2dff2e;
+}
+
+.section.food {
+  background-image: url("/images/photos/alimentação.png");
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0 10px 0;
+  box-shadow: 0 0 15px black;
+}
+.section.cine {
+  background-image: url("/images/photos/cinema-home.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px black;
+}
+
+
+.section h2 {
+  margin: 10px auto;
+  width: 95%;
+  font-size: 1.8rem;
+  padding-left: 10px;
+  border-radius: 8px 0;
+  border-left: 5px solid var(--main);
+}
+
+.section.food h2,
+.section.cine h2,
+.section.banner h2 {
+  color: var(--subtitle2);
+}
+.section.banner {
+  min-height: 480px;
+}
+.section p {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.section.food > p {
+  padding: 5px 20px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  background-color: #fc7800a3;
+  font-size: 1.2rem;
+}
+
+.section.cine img {
+  width: 225px;
+  margin: 10px auto;
+  position: absolute;
+  top: 34px;
+  right: 0;
+}
+.section.cine p {
+  color: white;
+}
+
+.btn {
+  background-color: var(--main);
+  color: var(--white);
+  width: 130px;
+  margin: 5px;
+  border-radius: 12px;
   justify-content: center;
-  align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
+  font-size: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.title a {
-  color: #0070f3;
   text-decoration: none;
+  align-self: center;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.btn:hover {
+  background-color: var(--second);
 }
 
-.title {
+.btn p {
+  padding: 10px 20px;
+  text-align: center;
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.2rem;
+}
+.section.food .btn {
+  background-color: var(--btn-food);
 }
 
-.title,
-.description {
+.section.food .btn:hover {
+  background-color: var(--btn-food-hover);
+}
+
+.section.cine .btn {
+  width: 180px;
+}
+.section p strong {
+  color: var(--main);
+}
+.section.shop > p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.storie {
+  width: 80%;
+  margin: 10px auto;
+}
+.photo {
+  width: 90%;
+  margin: 10px auto;
+  border-radius: 12px;
+}
+
+.section ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 0;
+}
+.section ul li {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.highlights {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  background-color: #edcffd;
+  border-radius: 20px;
+  justify-content: center;
+  border: 1px solid #a715f478;
+  box-shadow: 0 0 10px #a600ffa1;
+}
+.highlights h3 {
+  margin: 0;
+  padding: 10px;
   text-align: center;
 }
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.highlights p {
+  margin: 0;
+  padding: 20px;
+  font-size: 1rem;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.parking {
   display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px;
+}
+.highlights .parking p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+.highlights img {
+  margin-top: 20px;
+  height: 55px;
+}
+.highlights img.bank {
+  border-radius: 12px;
+  height: 45px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
+  margin: 20px 0;
+}
+.videoBg {
+  width: 100%;
+  filter: blur(0px);
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+
+
+.titleBackground {
+    max-width: 95%;
+    padding: 1rem;
+    padding-left: 2.3rem;
+    margin: 2rem;
+    margin-left: -15px;
+    background-color: rgba(40, 166, 186, 1);
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(65, 65, 65, 1);
+    background-image: url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/apple_box.png);
+    background-repeat: repeat-x;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.titleText {
+  color: var(--subtitle);
+  font-size: var(--font-big);
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.subTitleText {
+  color: var(--subtitle);
+  font-size: var(--font-normal);
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
 
-.logo {
-  height: 1em;
-}
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+@media (min-width: 768px) {
+
+ 
 }

@@ -1,14 +1,31 @@
 {
   "name": "new-project",
   "version": "0.1.0",
+  "description": "Site de Higienização de Estofados",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3200",
     "build": "next build",
     "start": "next start"
   },
+  "keywords": [
+    "higienização",
+    "de",
+    "estofados",
+    "limpeza",
+    "de",
+    "estofados",
+    "nextJS",
+    "react",
+    "weads",
+    "marketing",
+    "digital"
+  ],
+  "author": "Weads Marketing Digital",
+  "license": "MIT",
   "dependencies": {
     "next": "9.5.2",
+    "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
