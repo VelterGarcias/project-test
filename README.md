@@ -1,5 +1,5 @@
 
-# Projeto padrão
+# Projeto de Testes padrão
 
 ## Recursos já neste projeto
 
