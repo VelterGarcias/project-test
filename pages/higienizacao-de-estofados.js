@@ -26,7 +26,7 @@ export default function Home() {
       sCdAvisoRecebimento: "N",
     };
 
-    const url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPreco'
+    const url = 'https://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPreco'
     const method = 'POST'
     const data = mountSearchParams(requestBody);
     const options = {
