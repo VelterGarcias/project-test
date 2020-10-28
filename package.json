@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Site de Higienização de Estofados",
   "private": true,
+  "proxy": "http://api.teste.com.br/v1",
   "scripts": {
     "dev": "next dev -p 3200",
     "build": "next build",
@@ -25,9 +26,12 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "next": "9.5.2",
     "nprogress": "^0.2.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "xml2js": "^0.4.23"
   }
 }

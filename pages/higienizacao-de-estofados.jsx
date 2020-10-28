@@ -1,12 +1,16 @@
 import Head from 'next/head'
 import axios from "axios";
+import cors from "cors";
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
+
+import { useState } from 'react';
 
 export default function Home() {
 
   const mountSearchParams = obj => Object.getOwnPropertyNames(obj).map(key => `${key}=${obj[key]}`).join('&');
-
+  const [price, setPrice] = useState()
+  const [peso, setPeso] = useState()
   const handleTeste = async () => {
 
     const requestBody = {
@@ -15,7 +19,7 @@ export default function Home() {
       nCdServico: "04510",
       sCepOrigem: "96610000",
       sCepDestino: "95702512",
-      nVlPeso: "1",
+      nVlPeso: peso,
       nCdFormato: "1",
       nVlComprimento: "20",
       nVlAltura: "20",
@@ -26,16 +30,13 @@ export default function Home() {
       sCdAvisoRecebimento: "N",
     };
 
-    const url = 'https://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPreco'
+    const url = '/api/teste'
     const method = 'POST'
-    const data = mountSearchParams(requestBody);
+    const data = requestBody
     const options = {
       url,
       method,
-      data,
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
-      },
+      data
     };
 
     const response = await axios(options)
@@ -45,14 +46,25 @@ export default function Home() {
 
     
     console.log(response)
+    setPrice(response.data.resp)
     return response;
     
   };
 
   return (
     <Layout pageTitle="LaLeLimp Higienização de Estofados" >
+
+      <label htmlFor="peso">Peso</label>
+      <input type="text" id="peso" onChange={(e) => { setPeso(e.target.value) }} />
       
       <button onClick={handleTeste}>Teste</button>
+
+      {
+        price &&
+        <>
+          <h2>{price.Valor}</h2>
+        </>
+      }
       <Services />
       <ServicesDetails   />
     </Layout>
