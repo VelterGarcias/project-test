@@ -25,7 +25,7 @@ export default function Nav(props) {
                 <ul>
                     {  LinkItem.map((item, i) => {
                         let isActive = active == i ? true : false;
-                        return <LinkMenu key={item.id} link={item.link} label={item.label} as={item.as} isActive={isActive}/>
+                        return <LinkMenu key={`nav-${item.id}`} link={item.link} label={item.label} as={item.as} isActive={isActive}/>
                     })
                     }
                 </ul>

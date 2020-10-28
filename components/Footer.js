@@ -32,7 +32,7 @@ export default function Footer(){
                         <ul className={styles.links}>
                             <li className={styles.title}>Links</li>
                             {  LinkItem.map(item => (
-                                <LinkMenu key={item.id} link={item.link} label={item.label} as={item.as} />
+                                <LinkMenu key={`footer-${item.id}`} link={item.link} label={item.label} as={item.as} />
                              ))
                             }
                         </ul>

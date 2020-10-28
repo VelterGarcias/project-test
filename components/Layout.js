@@ -5,7 +5,7 @@ import Footer from "./Footer"
 
 import { useEffect } from 'react'
 
-export default function (props) {
+export default function Layout (props) {
 
     useEffect(() => {
         const target = document.querySelectorAll('[data-animate]')
